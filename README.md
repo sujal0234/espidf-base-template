@@ -1,18 +1,58 @@
-ESP-IDF Base Project Template
+# ESP-IDF Base Template for ESP32 Development
 
-This repository contains a minimal and reusable ESP-IDF project template.
-It is designed to serve as a starting point for any new ESP32 development project.
+## Project Description
+This repository serves as an ESP-IDF base template project for developing applications on the ESP32 platform. It provides a well-structured starting point for developers to quickly bootstrap their projects utilizing the Espressif IoT Development Framework (ESP-IDF).
 
-Instead of creating a new project using idf.py create-project every time, you can simply clone this repository and begin development immediately.
+## Project Structure
+```
+espidf-base-template/
+├── CMakeLists.txt        # CMake build file
+├── main/                 # Main application source files
+│   └── main.c           # Entry point of the application
+├── include/              # Header files
+├── components/           # Custom components for the application
+└── README.md             # Project description and documentation
+```
 
-This template includes:
+## Features
+- Bootstrapped with ESP-IDF
+- Easy to extend with additional components
+- CMake-based build system
+- Includes example application in `main/main.c`
+- Structured for easy collaboration and scaling
 
-Basic app_main() structure
+## Prerequisites
+- [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) installed and configured on your machine.
+- An ESP32 development board.
+- Basic knowledge of C programming and embedded systems.
 
-FreeRTOS headers included
+## Installation Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sujal0234/espidf-base-template.git
+   cd espidf-base-template
+   ```
+2. Set up the ESP-IDF environment:
+   ```bash
+   . $HOME/esp-idf/export.sh
+   ```
+3. Build the project:
+   ```bash
+   idf.py build
+   ```
+4. Flash the project to your ESP32:
+   ```bash
+   idf.py -p (PORT) flash
+   ```
+   Replace `(PORT)` with your ESP32's serial port.
 
-GPIO driver included
+## Usage Guidelines
+- Open the `main/main.c` file to start modifying the application logic.
+- Utilize the `components/` directory to add any custom functionality.
+- Refer to the ESP-IDF documentation for additional libraries and APIs.
 
-ESP logging support included
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Infinite loop ready for implementation
+## Acknowledgments
+- Special thanks to the Espressif team for their excellent framework and tools!
